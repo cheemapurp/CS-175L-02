@@ -37,7 +37,7 @@ public class HousePainting
 		WidthDoor = in.nextInt();
 		System.out.print("Enter cost per square foot: ");
 		CostPerSqFt = in.nextDouble();
-		SqFtToPaint = ((2 * (Length * Width)) + ((2 * (Length * Width)) + ((0.5) * (Length * (Height - Width))))) - 
+		SqFtToPaint = ((2 * (Length * Width)) + ((2 * (Length * Width)) + ((Length * (Height - Width))))) - 
 		((WindowNum * LengthWindow * WidthWindow) + (DoorNum * LengthDoor * WidthDoor));
 		CostToPaint = SqFtToPaint * CostPerSqFt;
 		System.out.println();
