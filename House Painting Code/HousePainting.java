@@ -41,6 +41,7 @@ public class HousePainting
 		CostToPaint = SqFtToPaint * CostPerSqFt;
 		System.out.println();
 		
+		System.out.print("The total paintable surface area is: " + SqFtToPaint + " Square Feet.";
 		System.out.println("The Cost to Paint the house is: " + CostToPaint + " USD Dollars.");
 	}
 }
