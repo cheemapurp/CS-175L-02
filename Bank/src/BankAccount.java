@@ -11,15 +11,17 @@ public class BankAccount
    /**
       Constructs a bank account with zero balance.
    */
-   public BankAccount()
+   public BankAccount(double startBal, double interest)
    {
-      balance = 1000;
-      interestPct = 0.05;
+      balance = startBal;
+      interestPct = interest;
    }
    
    public void calcInterest(double interestPct)
    {
 	   balance = (balance * interestPct) + balance;
+	   System.out.println();
+	   System.out.println("\tInterest: " + interestPct);
    }
 
    /**
@@ -29,6 +31,8 @@ public class BankAccount
    public void deposit(double amount)
    {
       balance += amount;
+      System.out.println();
+      System.out.println("\tDeposited: " + amount);
    }
 
    /**
@@ -41,6 +45,8 @@ public class BankAccount
 	   if (amount < balance)
 	   {
 		   balance -= amount;
+		   System.out.println();
+		   System.out.println("\tWithdrew: " + amount);
 	   }
 	   else
 	   {

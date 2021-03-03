@@ -6,8 +6,6 @@ public class BankAccountTester
 	{
 		DecimalFormat df = new DecimalFormat("###,##0.00");
 		Scanner in = new Scanner(System.in);
-		BankAccount myBankAccount = new BankAccount();
-		
 		System.out.print("Enter starting balance of your account: ");
 		double startBalance = in.nextDouble();
 		System.out.println();
@@ -16,12 +14,11 @@ public class BankAccountTester
 		System.out.println();
 		System.out.println("\tCreated new account with $" + df.format(startBalance) + " and interest rate of " + df.format(interest) + "%");
 		System.out.println();
+		BankAccount myBankAccount = new BankAccount(startBalance, interest);
 		
  		System.out.print("How much would you like to deposit? ");
 		double depositAmount = in.nextDouble();
 		myBankAccount.deposit(depositAmount);
-		System.out.println();
-		System.out.println("\tDeposited: $" + df.format(depositAmount));
 		System.out.println();
 		System.out.println("\tYour balance is now $" + df.format(myBankAccount.getBalance()));
 		System.out.println();
@@ -33,8 +30,6 @@ public class BankAccountTester
 		System.out.print("How much would you like to withdraw? ");
 	    double withdrawAmount2 = in.nextDouble();
 	    myBankAccount.withdraw(withdrawAmount2);
-	    System.out.println();
-	    System.out.println("\tWithdrew: $" + df.format(withdrawAmount2));
 	    System.out.println();
 	    System.out.print("If you want me to generate interest, enter 'Yes': ");
 	    String answer = in.next();
