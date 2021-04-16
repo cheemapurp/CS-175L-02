@@ -23,8 +23,8 @@ public class BankAccountTester
 		
 		for (BankAccount account : accountList)
 		{
-			if(account.getBalance() >= fred.getBalance() && account.getBalance() >= sally.getBalance() && 
-					account.getBalance() >= joe.getBalance() && account.getBalance() >= gil.getBalance())
+			if(account.getBalance() >= account.anyAccount(fred) && account.getBalance() >= account.anyAccount(sally) && 
+					account.getBalance() >= account.anyAccount(joe) && account.getBalance() >= account.anyAccount(gil))
 			{
 				System.out.println("Account with highest balance: \n\n" + account.getAccount());
 			}
@@ -34,8 +34,8 @@ public class BankAccountTester
 		
 		for (BankAccount account : accountList)
 		{
-			if(account.getBalance() >= fred.getBalance() && account.getBalance() >= joe.getBalance() && 
-					account.getBalance() >= gil.getBalance())
+			if(account.getBalance() >= account.anyAccount(fred) && account.getBalance() >= account.anyAccount(joe) && 
+					account.getBalance() >= account.anyAccount(gil))
 			{
 				System.out.println("Account with highest balance: \n\n" + account.getAccount());
 			}
